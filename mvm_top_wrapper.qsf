@@ -1,0 +1,53 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2023  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the Intel FPGA Software License Subscription Agreements 
+# on the Quartus Prime software download page.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 23.4.0 Build 79 11/22/2023 SC Pro Edition
+# Date created = 20:45:27  October 22, 2024
+#
+# -------------------------------------------------------------------------- #
+set_global_assignment -name TOP_LEVEL_ENTITY mvm_top_wrapper
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 23.4.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:45:27  OCTOBER 22, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION "23.4.0 Pro Edition"
+set_global_assignment -name SYSTEMVERILOG_FILE src/top/mvm_top_wrapper.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/top/mvm_top.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/noc/axis_mesh.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/noc/axis_serdes_shims.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/noc/dcfifo_agilex7.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/noc/dcfifo_mixed_width_agilex7.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/noc/fifo_agilex7.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/noc/mesh.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/noc/noc_pipeline_link.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/noc/reset_synchronizer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/noc/router.sv
+set_global_assignment -name VERILOG_FILE src/mvm/rtl_mvm.v
+set_global_assignment -name VERILOG_FILE src/mvm/reduce.v
+set_global_assignment -name VERILOG_FILE src/mvm/dpe.v
+set_global_assignment -name VERILOG_FILE src/mvm/datapath.v
+set_global_assignment -name VERILOG_FILE src/mvm/components.v
+set_global_assignment -name VERILOG_FILE src/mvm/accum.v
+set_global_assignment -name SYSTEMVERILOG_FILE src/axis/axis_passthrough.sv
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name DEVICE AGFB014R24A3E3V
+set_global_assignment -name FAMILY "Agilex 7"
+set_global_assignment -name PWRMGT_VOLTAGE_OUTPUT_FORMAT "LINEAR FORMAT"
+set_global_assignment -name PWRMGT_LINEAR_FORMAT_N "-12"

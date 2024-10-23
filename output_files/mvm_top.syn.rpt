@@ -1,0 +1,273 @@
+Synthesis report
+Mon Oct 21 20:50:51 2024
+Quartus Prime Version 23.4.0 Build 79 11/22/2023 SC Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Synthesis Summary
+  2. Synthesis Settings
+  3. Verilog Macro Usage
+  4. Additional Pragma Usages
+  5. Synthesis Messages
+
+
+
++-----------------------------------------------------------+
+; Synthesis Summary                                         ;
++-----------------------+-----------------------------------+
+; Synthesis Status      ; Failed - Mon Oct 21 20:50:50 2024 ;
+; Revision Name         ; mvm_top                           ;
+; Top-level Entity Name ; mvm_top                           ;
+; Family                ; Agilex 7                          ;
++-----------------------+-----------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Synthesis Settings                                                                                                                  ;
++---------------------------------------------------------------------------------+-------------------------+-------------------------+
+; Option                                                                          ; Setting                 ; Default Value           ;
++---------------------------------------------------------------------------------+-------------------------+-------------------------+
+; Device                                                                          ; AGFB014R24A2E3V         ;                         ;
+; Top-level entity name                                                           ; mvm_top                 ; mvm_top                 ;
+; Family name                                                                     ; Agilex 7                ; Cyclone 10 GX           ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                      ; On                      ;
+; Enable compact report table                                                     ; Off                     ; Off                     ;
+; Enable Design Assistant in the compilation flow                                 ; On                      ; On                      ;
+; Design Assistant include IP blocks                                              ; Off                     ; Off                     ;
+; High fanout net threshold for RAM inference                                     ; 15                      ; 15                      ;
+; Design Assistant limit on reported violations per rule                          ; 5000                    ; 5000                    ;
+; Optimization Mode                                                               ; Balanced                ; Balanced                ;
+; Allow Register Retiming                                                         ; On                      ; On                      ;
+; Allow RAM Retiming                                                              ; Off                     ; Off                     ;
+; Allow DSP Retiming                                                              ; Off                     ; Off                     ;
+; Restructure Multiplexers                                                        ; Auto                    ; Auto                    ;
+; Waive gated clock synchronizer check                                            ; On                      ; On                      ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                     ; Off                     ;
+; Preserve fewer node names                                                       ; On                      ; On                      ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable                  ; Enable                  ;
+; Verilog Version                                                                 ; Verilog_2001            ; Verilog_2001            ;
+; VHDL Version                                                                    ; VHDL_1993               ; VHDL_1993               ;
+; State Machine Processing                                                        ; Auto                    ; Auto                    ;
+; Safe State Machine                                                              ; Auto                    ; Auto                    ;
+; Iteration limit for constant Verilog loops                                      ; 5000                    ; 5000                    ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                     ; 250                     ;
+; Infer RAMs from Raw Logic                                                       ; On                      ; On                      ;
+; DSP Block Balancing                                                             ; Auto                    ; Auto                    ;
+; NOT Gate Push-Back                                                              ; On                      ; On                      ;
+; Power-Up Don't Care                                                             ; On                      ; On                      ;
+; Remove Redundant Logic Cells                                                    ; Off                     ; Off                     ;
+; Remove Duplicate Registers                                                      ; On                      ; On                      ;
+; Ignore GLOBAL Buffers                                                           ; Off                     ; Off                     ;
+; Ignore LCELL Buffers                                                            ; Off                     ; Off                     ;
+; Ignore SOFT Buffers                                                             ; On                      ; On                      ;
+; Optimization Technique                                                          ; Balanced                ; Balanced                ;
+; Auto Open-Drain Pins                                                            ; On                      ; On                      ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                     ; Off                     ;
+; Auto ROM Replacement                                                            ; On                      ; On                      ;
+; Auto RAM Replacement                                                            ; On                      ; On                      ;
+; Auto DSP Block Replacement                                                      ; On                      ; On                      ;
+; Auto Shift Register Replacement                                                 ; Auto                    ; Auto                    ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto                    ; Auto                    ;
+; Physical Shift Register Inference                                               ; On                      ; On                      ;
+; Auto Clock Enable Replacement                                                   ; On                      ; On                      ;
+; Strict RAM Replacement                                                          ; Off                     ; Off                     ;
+; Allow Synchronous Control Signals                                               ; On                      ; On                      ;
+; Force Use of Synchronous Clear Signals                                          ; Off                     ; Off                     ;
+; Auto Resource Sharing                                                           ; Off                     ; Off                     ;
+; Allow Any RAM Size For Recognition                                              ; Off                     ; Off                     ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                     ; Off                     ;
+; Ignore translate_off and synthesis_off directives                               ; Off                     ; Off                     ;
+; Report Propagation of Constraints                                               ; On                      ; On                      ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                     ; Off                     ;
+; Synchronization Register Chain Length                                           ; 3                       ; 3                       ;
+; Power Optimization During Synthesis                                             ; Normal compilation      ; Normal compilation      ;
+; HDL message level                                                               ; Level2                  ; Level2                  ;
+; Number of Protected Registers Reported in Synthesis Report                      ; 100                     ; 100                     ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000                    ; 5000                    ;
+; Number of Optimized Away Hierarchies Reported in Synthesis Report               ; 100                     ; 100                     ;
+; Group Identical Hierarchies in Optimized Away Hierarchies Report                ; On                      ; On                      ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000                    ; 5000                    ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                     ; 100                     ;
+; Clock MUX Protection                                                            ; On                      ; On                      ;
+; Auto Gated Clock Conversion                                                     ; Off                     ; Off                     ;
+; Block Design Naming                                                             ; Auto                    ; Auto                    ;
+; SDC constraint protection                                                       ; Off                     ; Off                     ;
+; Optimization and Constraint Precedence                                          ; Prioritize Optimization ; Prioritize Optimization ;
+; Synthesis Effort                                                                ; Auto                    ; Auto                    ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                      ; On                      ;
+; Analysis & Synthesis Message Level                                              ; Medium                  ; Medium                  ;
+; Disable Register Merging Across Hierarchies                                     ; Auto                    ; Auto                    ;
+; Resource Aware Inference For Block RAM                                          ; On                      ; On                      ;
+; Automatic Parallel Synthesis                                                    ; On                      ; On                      ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                     ; Off                     ;
+; Disable DSP Negate Inferencing                                                  ; Off                     ; Off                     ;
+; Report Parameter Settings                                                       ; On                      ; On                      ;
+; Report Parameter Settings to ASCII                                              ; On                      ; On                      ;
+; Report Source Assignments                                                       ; On                      ; On                      ;
+; Report Source Assignments to ASCII                                              ; On                      ; On                      ;
+; Report Resource Utilization by Entity to ASCII                                  ; On                      ; On                      ;
+; Size of the Latch Report                                                        ; 100                     ; 100                     ;
+; Enable VHDL static assertion support                                            ; Off                     ; Off                     ;
+; Enable SystemVerilog static assertion support                                   ; Off                     ; Off                     ;
+; Enable State Machines Inference                                                 ; On                      ; On                      ;
+; Allow RAMs Inferred In Generate-For Loop For Verilog                            ; Off                     ; Off                     ;
+; Enable formal verification support during compilation                           ; Off                     ; Off                     ;
+; Size of the PR Initial Conditions Report                                        ; 100                     ; 100                     ;
+; Number of Registers with Ignored Power-Up Settings Reported in Synthesis Report ; 500                     ; 500                     ;
+; Report PR Initial Values as Errors                                              ; Off                     ; Off                     ;
+; Fractal Synthesis                                                               ; Off                     ; Off                     ;
+; Aggressive Multiplexer Area Optimization                                        ; Auto                    ; Auto                    ;
+; 6LUT to Extended Mode Conversion                                                ; Auto                    ; Auto                    ;
+; Synthesis Available Resource Multiplier                                         ; 1                       ; 1                       ;
+; Message Level for Unconnected Output Ports                                      ; Warning                 ; Warning                 ;
+; Pack Barrelshifters into Carry Chains for Better Area                           ; Auto                    ; Auto                    ;
+; Initialize Verilog enums to X                                                   ; Off                     ; Off                     ;
+; Enable dynamic report                                                           ; Off                     ; Off                     ;
+; Show Collapsible Rows in Ascii Report for Warning Summary Reports               ; On                      ; On                      ;
+; Enable preserve for debug assignments                                           ; Off                     ; Off                     ;
++---------------------------------------------------------------------------------+-------------------------+-------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Verilog Macro Usage                                                         ;
++---------------------------------------+----------+------+-------+-----------+
+; Name                                  ; Location ; From ; Value ; Arguments ;
++---------------------------------------+----------+------+-------+-----------+
+; sim/parameters.sv                     ;          ;      ;       ;           ;
+;     PARAMETERS_SV                     ;          ;      ;       ;           ;
+;         Refer                         ; 2        ; None ;       ;           ;
+;         Define                        ; 3        ;      ;       ;           ;
+; src/noc/dcfifo_agilex7.sv             ;          ;      ;       ;           ;
+;     ALTERA_RESERVED_QIS               ;          ;      ;       ;           ;
+;         Refer                         ; 46       ; QSF  ;       ;           ;
+;         Refer                         ; 50       ; QSF  ;       ;           ;
+; src/noc/dcfifo_mixed_width_agilex7.sv ;          ;      ;       ;           ;
+;     ALTERA_RESERVED_QIS               ;          ;      ;       ;           ;
+;         Refer                         ; 46       ; QSF  ;       ;           ;
+;         Refer                         ; 50       ; QSF  ;       ;           ;
+; src/noc/fifo_agilex7.sv               ;          ;      ;       ;           ;
+;     SIMULATION                        ;          ;      ;       ;           ;
+;         Refer                         ; 48       ; None ;       ;           ;
++---------------------------------------+----------+------+-------+-----------+
+&lt;same as above&gt; indicates that the value matches the previous occurence of the macro.
+
+
++-----------------------------------------------------------+
+; Additional Pragma Usages                                  ;
++--------+---------------+----------------------------------+
+; Entity ; Name          ; Location                         ;
++--------+---------------+----------------------------------+
+; --     ; translate_off ; fifo_agilex7.sv:15               ;
+; --     ; translate_on  ; fifo_agilex7.sv:17               ;
+; --     ; translate_off ; dcfifo_mixed_width_agilex7.sv:15 ;
+; --     ; translate_on  ; dcfifo_mixed_width_agilex7.sv:17 ;
+; --     ; translate_off ; dcfifo_agilex7.sv:15             ;
+; --     ; translate_on  ; dcfifo_agilex7.sv:17             ;
++--------+---------------+----------------------------------+
+
+
++--------------------+
+; Synthesis Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Synthesis
+    Info: Version 23.4.0 Build 79 11/22/2023 SC Pro Edition
+    Info: Processing started: Mon Oct 21 20:50:49 2024
+    Info: System process ID: 56780
+Info: Command: quartus_syn --dni --read_settings_files=on --write_settings_files=off --analysis_and_elaboration simple_noc -c mvm_top --synthesis
+Info: The application is running in 'DNI' mode.
+Info: qis_default_flow_script.tcl version: #3
+Info: Initializing Synthesis in DNI mode...
+Info: Project = "simple_noc"
+Info: Revision = "mvm_top"
+Info (21958): Initialized Quartus Message Database
+Info: Analyzing source files
+Warning (16818): Verilog HDL warning at mesh.sv(254): block identifier is required on this block File: /home/advent2/Simple_NoC/src/noc/mesh.sv Line: 254
+Warning (16818): Verilog HDL warning at mesh.sv(255): block identifier is required on this block File: /home/advent2/Simple_NoC/src/noc/mesh.sv Line: 255
+Info (16884): Verilog HDL info at mvm_top.sv(1): analyzing included file /home/advent2/Simple_NoC/sim/parameters.sv File: /home/advent2/Simple_NoC/src/top/mvm_top.sv Line: 1
+Info (19624): Verilog HDL info at mvm_top.sv(1): back to file 'src/top/mvm_top.sv' File: /home/advent2/Simple_NoC/src/top/mvm_top.sv Line: 1
+Warning (21442): Verilog HDL warning at parameters.sv(6): parameter 'LFSR_DW' declared inside compilation unit '$unit_src_top_mvm_top_sv' shall be treated as localparam File: /home/advent2/Simple_NoC/sim/parameters.sv Line: 6
+Warning (21442): Verilog HDL warning at parameters.sv(7): parameter 'LFSR_DEFAULT' declared inside compilation unit '$unit_src_top_mvm_top_sv' shall be treated as localparam File: /home/advent2/Simple_NoC/sim/parameters.sv Line: 7
+Warning (21442): Verilog HDL warning at parameters.sv(10): parameter 'DATAW' declared inside compilation unit '$unit_src_top_mvm_top_sv' shall be treated as localparam File: /home/advent2/Simple_NoC/sim/parameters.sv Line: 10
+Warning (21442): Verilog HDL warning at parameters.sv(11): parameter 'BYTEW' declared inside compilation unit '$unit_src_top_mvm_top_sv' shall be treated as localparam File: /home/advent2/Simple_NoC/sim/parameters.sv Line: 11
+Warning (21442): Verilog HDL warning at parameters.sv(12): parameter 'IDW' declared inside compilation unit '$unit_src_top_mvm_top_sv' shall be treated as localparam File: /home/advent2/Simple_NoC/sim/parameters.sv Line: 12
+Warning (21442): Verilog HDL warning at parameters.sv(13): parameter 'DESTW' declared inside compilation unit '$unit_src_top_mvm_top_sv' shall be treated as localparam File: /home/advent2/Simple_NoC/sim/parameters.sv Line: 13
+Warning (21442): Verilog HDL warning at parameters.sv(14): parameter 'IPRECISION' declared inside compilation unit '$unit_src_top_mvm_top_sv' shall be treated as localparam File: /home/advent2/Simple_NoC/sim/parameters.sv Line: 14
+Warning (21442): Verilog HDL warning at parameters.sv(15): parameter 'OPRECISION' declared inside compilation unit '$unit_src_top_mvm_top_sv' shall be treated as localparam File: /home/advent2/Simple_NoC/sim/parameters.sv Line: 15
+Warning (21442): Verilog HDL warning at parameters.sv(16): parameter 'LANES' declared inside compilation unit '$unit_src_top_mvm_top_sv' shall be treated as localparam File: /home/advent2/Simple_NoC/sim/parameters.sv Line: 16
+Warning (21442): Verilog HDL warning at parameters.sv(17): parameter 'USERW' declared inside compilation unit '$unit_src_top_mvm_top_sv' shall be treated as localparam File: /home/advent2/Simple_NoC/sim/parameters.sv Line: 17
+Warning (21442): Verilog HDL warning at parameters.sv(19): parameter 'DPES' declared inside compilation unit '$unit_src_top_mvm_top_sv' shall be treated as localparam File: /home/advent2/Simple_NoC/sim/parameters.sv Line: 19
+Warning (21442): Verilog HDL warning at parameters.sv(20): parameter 'NODES' declared inside compilation unit '$unit_src_top_mvm_top_sv' shall be treated as localparam File: /home/advent2/Simple_NoC/sim/parameters.sv Line: 20
+Warning (21442): Verilog HDL warning at parameters.sv(21): parameter 'NODESW' declared inside compilation unit '$unit_src_top_mvm_top_sv' shall be treated as localparam File: /home/advent2/Simple_NoC/sim/parameters.sv Line: 21
+Warning (21442): Verilog HDL warning at parameters.sv(22): parameter 'RFDEPTH' declared inside compilation unit '$unit_src_top_mvm_top_sv' shall be treated as localparam File: /home/advent2/Simple_NoC/sim/parameters.sv Line: 22
+Warning (21442): Verilog HDL warning at parameters.sv(23): parameter 'RFADDRW' declared inside compilation unit '$unit_src_top_mvm_top_sv' shall be treated as localparam File: /home/advent2/Simple_NoC/sim/parameters.sv Line: 23
+Warning (21442): Verilog HDL warning at parameters.sv(24): parameter 'INSTW' declared inside compilation unit '$unit_src_top_mvm_top_sv' shall be treated as localparam File: /home/advent2/Simple_NoC/sim/parameters.sv Line: 24
+Warning (21442): Verilog HDL warning at parameters.sv(25): parameter 'INSTD' declared inside compilation unit '$unit_src_top_mvm_top_sv' shall be treated as localparam File: /home/advent2/Simple_NoC/sim/parameters.sv Line: 25
+Warning (21442): Verilog HDL warning at parameters.sv(26): parameter 'INSTADDRW' declared inside compilation unit '$unit_src_top_mvm_top_sv' shall be treated as localparam File: /home/advent2/Simple_NoC/sim/parameters.sv Line: 26
+Warning (21442): Verilog HDL warning at parameters.sv(27): parameter 'AXIS_OPS' declared inside compilation unit '$unit_src_top_mvm_top_sv' shall be treated as localparam File: /home/advent2/Simple_NoC/sim/parameters.sv Line: 27
+Warning (21442): Verilog HDL warning at parameters.sv(28): parameter 'AXIS_OPSW' declared inside compilation unit '$unit_src_top_mvm_top_sv' shall be treated as localparam File: /home/advent2/Simple_NoC/sim/parameters.sv Line: 28
+Warning (21442): Verilog HDL warning at parameters.sv(29): parameter 'FIFOD' declared inside compilation unit '$unit_src_top_mvm_top_sv' shall be treated as localparam File: /home/advent2/Simple_NoC/sim/parameters.sv Line: 29
+Warning (21442): Verilog HDL warning at parameters.sv(30): parameter 'DATAPATH_DELAY' declared inside compilation unit '$unit_src_top_mvm_top_sv' shall be treated as localparam File: /home/advent2/Simple_NoC/sim/parameters.sv Line: 30
+Warning (21442): Verilog HDL warning at parameters.sv(31): parameter 'USE_RELU' declared inside compilation unit '$unit_src_top_mvm_top_sv' shall be treated as localparam File: /home/advent2/Simple_NoC/sim/parameters.sv Line: 31
+Warning (21442): Verilog HDL warning at parameters.sv(37): parameter 'ROWS' declared inside compilation unit '$unit_src_top_mvm_top_sv' shall be treated as localparam File: /home/advent2/Simple_NoC/sim/parameters.sv Line: 37
+Warning (21442): Verilog HDL warning at parameters.sv(38): parameter 'COLUMNS' declared inside compilation unit '$unit_src_top_mvm_top_sv' shall be treated as localparam File: /home/advent2/Simple_NoC/sim/parameters.sv Line: 38
+Warning (21442): Verilog HDL warning at parameters.sv(39): parameter 'TDATAW' declared inside compilation unit '$unit_src_top_mvm_top_sv' shall be treated as localparam File: /home/advent2/Simple_NoC/sim/parameters.sv Line: 39
+Warning (21442): Verilog HDL warning at parameters.sv(40): parameter 'TIDW' declared inside compilation unit '$unit_src_top_mvm_top_sv' shall be treated as localparam File: /home/advent2/Simple_NoC/sim/parameters.sv Line: 40
+Warning (21442): Verilog HDL warning at parameters.sv(41): parameter 'TDESTW' declared inside compilation unit '$unit_src_top_mvm_top_sv' shall be treated as localparam File: /home/advent2/Simple_NoC/sim/parameters.sv Line: 41
+Warning (21442): Verilog HDL warning at parameters.sv(42): parameter 'NUM_PACKETS' declared inside compilation unit '$unit_src_top_mvm_top_sv' shall be treated as localparam File: /home/advent2/Simple_NoC/sim/parameters.sv Line: 42
+Critical Warning (20759): Use the Reset Release IP in Intel Agilex 7 FPGA designs to ensure a successful configuration. For more information about the Reset Release IP, refer to the Configuration User Guide.
+Info: Elaborating from top-level entity "mvm_top"
+Info (22567): Verilog HDL info at components.v(151): extracting RAM for identifier 'mem' File: /home/advent2/Simple_NoC/src/mvm/components.v Line: 151
+Info (22567): Verilog HDL info at components.v(151): extracting RAM for identifier 'mem' File: /home/advent2/Simple_NoC/src/mvm/components.v Line: 151
+Info (22567): Verilog HDL info at components.v(78): extracting RAM for identifier 'mem' File: /home/advent2/Simple_NoC/src/mvm/components.v Line: 78
+Info (22567): Verilog HDL info at components.v(78): extracting RAM for identifier 'mem' File: /home/advent2/Simple_NoC/src/mvm/components.v Line: 78
+Info (22567): Verilog HDL info at components.v(151): extracting RAM for identifier 'mem' File: /home/advent2/Simple_NoC/src/mvm/components.v Line: 151
+Info (22567): Verilog HDL info at router.sv(48): extracting RAM for identifier 'route_table' File: /home/advent2/Simple_NoC/src/noc/router.sv Line: 48
+Info (22567): Verilog HDL info at router.sv(102): extracting RAM for identifier 'data_out_reg' File: /home/advent2/Simple_NoC/src/noc/router.sv Line: 102
+Error (13307): Verilog HDL File I/O error at router.sv(124): can't open Verilog Design File "../routing_tables/mesh_2x2/0_0.hex" File: /home/advent2/Simple_NoC/src/noc/router.sv Line: 124
+Info (22567): Verilog HDL info at router.sv(48): extracting RAM for identifier 'route_table' File: /home/advent2/Simple_NoC/src/noc/router.sv Line: 48
+Info (22567): Verilog HDL info at router.sv(102): extracting RAM for identifier 'data_out_reg' File: /home/advent2/Simple_NoC/src/noc/router.sv Line: 102
+Error (13307): Verilog HDL File I/O error at router.sv(124): can't open Verilog Design File "../routing_tables/mesh_2x2/0_1.hex" File: /home/advent2/Simple_NoC/src/noc/router.sv Line: 124
+Info (22567): Verilog HDL info at router.sv(48): extracting RAM for identifier 'route_table' File: /home/advent2/Simple_NoC/src/noc/router.sv Line: 48
+Info (22567): Verilog HDL info at router.sv(102): extracting RAM for identifier 'data_out_reg' File: /home/advent2/Simple_NoC/src/noc/router.sv Line: 102
+Error (13307): Verilog HDL File I/O error at router.sv(124): can't open Verilog Design File "../routing_tables/mesh_2x2/1_0.hex" File: /home/advent2/Simple_NoC/src/noc/router.sv Line: 124
+Info (22567): Verilog HDL info at router.sv(48): extracting RAM for identifier 'route_table' File: /home/advent2/Simple_NoC/src/noc/router.sv Line: 48
+Info (22567): Verilog HDL info at router.sv(102): extracting RAM for identifier 'data_out_reg' File: /home/advent2/Simple_NoC/src/noc/router.sv Line: 102
+Error (13307): Verilog HDL File I/O error at router.sv(124): can't open Verilog Design File "../routing_tables/mesh_2x2/1_1.hex" File: /home/advent2/Simple_NoC/src/noc/router.sv Line: 124
+Warning (16788): Net "data_north_in[0][0][586]" does not have a driver at mesh.sv(43) File: /home/advent2/Simple_NoC/src/noc/mesh.sv Line: 43
+Warning (16788): Net "dest_north_in[0][0][13]" does not have a driver at mesh.sv(44) File: /home/advent2/Simple_NoC/src/noc/mesh.sv Line: 44
+Warning (16788): Net "is_tail_north_in[0][0]" does not have a driver at mesh.sv(45) File: /home/advent2/Simple_NoC/src/noc/mesh.sv Line: 45
+Warning (16788): Net "send_north_in[0][0]" does not have a driver at mesh.sv(46) File: /home/advent2/Simple_NoC/src/noc/mesh.sv Line: 46
+Warning (16788): Net "credit_north_in[0][0]" does not have a driver at mesh.sv(47) File: /home/advent2/Simple_NoC/src/noc/mesh.sv Line: 47
+Warning (16788): Net "data_south_in[1][0][586]" does not have a driver at mesh.sv(55) File: /home/advent2/Simple_NoC/src/noc/mesh.sv Line: 55
+Warning (16788): Net "dest_south_in[1][0][13]" does not have a driver at mesh.sv(56) File: /home/advent2/Simple_NoC/src/noc/mesh.sv Line: 56
+Warning (16788): Net "is_tail_south_in[1][0]" does not have a driver at mesh.sv(57) File: /home/advent2/Simple_NoC/src/noc/mesh.sv Line: 57
+Warning (16788): Net "send_south_in[1][0]" does not have a driver at mesh.sv(58) File: /home/advent2/Simple_NoC/src/noc/mesh.sv Line: 58
+Warning (16788): Net "credit_south_in[1][0]" does not have a driver at mesh.sv(59) File: /home/advent2/Simple_NoC/src/noc/mesh.sv Line: 59
+Warning (16788): Net "data_east_in[0][1][586]" does not have a driver at mesh.sv(67) File: /home/advent2/Simple_NoC/src/noc/mesh.sv Line: 67
+Warning (16788): Net "dest_east_in[0][1][13]" does not have a driver at mesh.sv(68) File: /home/advent2/Simple_NoC/src/noc/mesh.sv Line: 68
+Warning (16788): Net "is_tail_east_in[0][1]" does not have a driver at mesh.sv(69) File: /home/advent2/Simple_NoC/src/noc/mesh.sv Line: 69
+Warning (16788): Net "send_east_in[0][1]" does not have a driver at mesh.sv(70) File: /home/advent2/Simple_NoC/src/noc/mesh.sv Line: 70
+Warning (16788): Net "credit_east_in[0][1]" does not have a driver at mesh.sv(71) File: /home/advent2/Simple_NoC/src/noc/mesh.sv Line: 71
+Warning (16788): Net "data_west_in[0][0][586]" does not have a driver at mesh.sv(79) File: /home/advent2/Simple_NoC/src/noc/mesh.sv Line: 79
+Warning (16788): Net "dest_west_in[0][0][13]" does not have a driver at mesh.sv(80) File: /home/advent2/Simple_NoC/src/noc/mesh.sv Line: 80
+Warning (16788): Net "is_tail_west_in[0][0]" does not have a driver at mesh.sv(81) File: /home/advent2/Simple_NoC/src/noc/mesh.sv Line: 81
+Warning (16788): Net "send_west_in[0][0]" does not have a driver at mesh.sv(82) File: /home/advent2/Simple_NoC/src/noc/mesh.sv Line: 82
+Warning (16788): Net "credit_west_in[0][0]" does not have a driver at mesh.sv(83) File: /home/advent2/Simple_NoC/src/noc/mesh.sv Line: 83
+Warning (16788): Net "axis_in_tvalid[1][1]" does not have a driver at mvm_top.sv(42) File: /home/advent2/Simple_NoC/src/top/mvm_top.sv Line: 42
+Warning (16788): Net "axis_in_tdata[1][1][511]" does not have a driver at mvm_top.sv(44) File: /home/advent2/Simple_NoC/src/top/mvm_top.sv Line: 44
+Warning (16788): Net "axis_in_tlast[1][1]" does not have a driver at mvm_top.sv(45) File: /home/advent2/Simple_NoC/src/top/mvm_top.sv Line: 45
+Warning (16788): Net "axis_in_tuser[1][1][74]" does not have a driver at mvm_top.sv(46) File: /home/advent2/Simple_NoC/src/top/mvm_top.sv Line: 46
+Warning (16788): Net "axis_in_tdest[1][1][11]" does not have a driver at mvm_top.sv(47) File: /home/advent2/Simple_NoC/src/top/mvm_top.sv Line: 47
+Warning (16788): Net "axis_out_tready[0][0]" does not have a driver at mvm_top.sv(50) File: /home/advent2/Simple_NoC/src/top/mvm_top.sv Line: 50
+Error: Failed to elaborate design: 
+Error: Flow failed: Errors generated during elaboration
+Error: Quartus Prime Synthesis was unsuccessful. 6 errors, 1 warning
+    Error: Peak virtual memory: 1415 megabytes
+    Error: Processing ended: Mon Oct 21 20:50:51 2024
+    Error: Elapsed time: 00:00:02
+    Error: System process ID: 56780
+
+

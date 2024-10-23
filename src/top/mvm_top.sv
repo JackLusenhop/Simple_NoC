@@ -1,4 +1,4 @@
-`include "parameters.sv"
+`include "/home/advent2/Simple_NoC/sim/parameters.sv"
 
 module mvm_top (
 

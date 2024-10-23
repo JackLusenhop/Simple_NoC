@@ -43,9 +43,9 @@ parameter int NUM_PACKETS  = 1;
 
 // Directories
 localparam string ROUTING_TABLES_DIR = 
-    (ROWS == 2 && COLUMNS == 2) ? "../routing_tables/mesh_2x2/" :
-    (ROWS == 3 && COLUMNS == 3) ? "../routing_tables/mesh_3x3/" :
-    (ROWS == 4 && COLUMNS == 4) ? "../routing_tables/mesh_4x4/" :
+    (ROWS == 2 && COLUMNS == 2) ? "/home/advent2/Simple_NoC/routing_tables/mesh_2x2/" :
+    (ROWS == 3 && COLUMNS == 3) ? "/home/advent2/Simple_NoC/routing_tables/mesh_3x3/" :
+    (ROWS == 4 && COLUMNS == 4) ? "/home/advent2/Simple_NoC/routing_tables/mesh_4x4/" :
     "../routing_tables/default/"; // Default this should be an error
 
 `endif // PARAMETERS_SV
